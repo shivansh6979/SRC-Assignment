@@ -10,11 +10,13 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
 import "../css/posts.css";
+import { Link } from "react-router-dom";
 
 export default function BasicTable() {
   const [post, setPost] = useState([]);
   const [sort, setSort] = useState(false);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const SortingHandler = () => {
     const duplicate = [...post];
@@ -29,6 +31,7 @@ export default function BasicTable() {
       .then((res) => {
         console.log(res.data);
         setPost(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -130,13 +133,26 @@ export default function BasicTable() {
                     style={{ color: "white", fontSize: "medium" }}
                     align="center"
                   >
-                    {row.body}
+                    <Link
+                      to={"/postdetails"}
+                      style={{ textDecoration: "none", color: "white" }}
+                      state={{ post: row }}
+                    >
+                      {row.body}
+                    </Link>
                   </TableCell>
                   <TableCell
                     style={{ color: "white", fontSize: "medium" }}
                     align="center"
                   >
-                    {row.title}
+                    <Link
+                      to={"/postdetails"}
+                      style={{ textDecoration: "none", color: "white" }}
+                      state={{ post: row }}
+                    >
+                      {" "}
+                      {row.title}
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))}

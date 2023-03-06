@@ -1,0 +1,26 @@
+.postdetails {
+  min-height: 80vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 20rem;
+  background-color: #09203f;
+  padding: 2rem;
+  color: white;
+  border-radius: 2rem;
+  width: 23rem;
+}
+.goback {
+  position: absolute;
+  left: 2rem;
+  background-color: #09203f;
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  top: 7.6rem;
+}
