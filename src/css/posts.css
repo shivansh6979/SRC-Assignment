@@ -1,0 +1,50 @@
+.table {
+  background: linear-gradient(
+    to left,
+    rgb(34, 34, 34) 8.3%,
+    rgb(0, 40, 60) 41.6%,
+    rgb(0, 143, 213) 93.4%
+  );
+}
+
+.search {
+  background-image: url("../images/DarkBlue.png");
+  height: 35vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputsearch {
+  height: 2rem;
+  width: 40rem;
+  padding: 10px;
+  border: none;
+  border-radius: 2rem;
+}
+
+.sorting {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+}
+.asc,
+.des {
+  padding: 6px;
+  width: 7.9rem;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+}
+
+.asc:hover {
+  transform: scale(1.1);
+}
+.des:hover {
+  transform: scale(1.1);
+}
+label {
+  font-size: x-large;
+  font-weight: bold;
+}
